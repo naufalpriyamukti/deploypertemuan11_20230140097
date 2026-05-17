@@ -22,8 +22,8 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(UserRepository userRepository){
-        return String username -> {
-            com.deploy.pertemuan11.model.User user = userRepository.findByUsername(username).
+        return username -> {
+            com.example.pertemuan11.model.User user = userRepository.findByUsername(username).
                     orElseThrow(() -> new UsernameNotFoundException("user tidak ditemukan"));
             return User
                     .withUsername(user.getUsername())
