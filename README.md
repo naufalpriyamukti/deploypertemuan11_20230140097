@@ -1,0 +1,11 @@
+Home
+
+<img width="959" height="599" alt="Image" src="https://github.com/user-attachments/assets/450fd1ff-b9e8-4af9-a0d1-66e714e0ace8" />
+
+Login
+
+<img width="959" height="599" alt="Image" src="https://github.com/user-attachments/assets/28510a66-b291-4ef0-ae89-e463dfa31ef1" />
+
+Register
+
+<img width="958" height="598" alt="Image" src="https://github.com/user-attachments/assets/ab97fa28-a3f4-4aa9-af0c-536798ee724f" />
