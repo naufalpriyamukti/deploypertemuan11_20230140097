@@ -25,4 +25,9 @@ public class AuthController {
         authService.register(request);
         return "redirect:/login";
     }
+
+    @GetMapping("/login")
+    public String loginPage() {
+        return "login";
+    }
 }
