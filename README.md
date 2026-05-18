@@ -9,3 +9,9 @@ Login
 Register
 
 <img width="958" height="598" alt="Image" src="https://github.com/user-attachments/assets/ab97fa28-a3f4-4aa9-af0c-536798ee724f" />
+
+Docker Compose
+
+<img width="959" height="599" alt="Image" src="https://github.com/user-attachments/assets/28dc0e87-ab29-4c4f-9417-26fe9c136a4f" />
+
+Psql
