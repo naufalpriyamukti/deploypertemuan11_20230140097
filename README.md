@@ -14,4 +14,6 @@ Docker Compose
 
 <img width="959" height="599" alt="Image" src="https://github.com/user-attachments/assets/28dc0e87-ab29-4c4f-9417-26fe9c136a4f" />
 
-Psql
+ isi data pada tabel 
+
+<img width="959" height="595" alt="Image" src="https://github.com/user-attachments/assets/62c21588-eefb-4b3a-912d-a7b64890237d" />
