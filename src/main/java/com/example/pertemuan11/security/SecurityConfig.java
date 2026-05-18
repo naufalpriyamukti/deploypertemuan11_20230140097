@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
 @Configuration
 @EnableWebSecurity
@@ -35,12 +36,12 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(httpSecurity http)
-        throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http)
+            throws Exception {
         http
-                .csrf(crsf -> crsf.disable())
+                .csrf(csrf -> csrf.disable())
 
-                .authorizeHttpRequest(auth -> auth
+                .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/register",
                                 "/login",
@@ -51,7 +52,7 @@ public class SecurityConfig {
 
                 .formLogin(login -> login
                         .loginPage("/login")
-                        .defaultSuccessUrl("/home, true")
+                        .defaultSuccessUrl("/home", true)
                         .permitAll()
                 )
 
@@ -59,6 +60,6 @@ public class SecurityConfig {
                         .logoutSuccessUrl("/login")
                 );
 
-        return http.builde();
+        return http.build();
     }
 }

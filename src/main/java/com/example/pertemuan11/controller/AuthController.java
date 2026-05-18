@@ -1,6 +1,6 @@
 package com.example.pertemuan11.controller;
 
-import ch.qos.logback.core.model.Model;
+import org.springframework.ui.Model;
 import com.example.pertemuan11.model.dto.RegisterRequest;
 import com.example.pertemuan11.service.AuthService;
 import lombok.RequiredArgsConstructor;
