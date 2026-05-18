@@ -16,9 +16,9 @@ public class AuthService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public class AuthService (UserRepository, PasswordEncoder passwordEncoder) {
-    this.userRepository = userRepository;
-    this.passwordEncoder = passwordEncoder;
+    public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public void register (RegisterRequest request) {
@@ -34,9 +34,9 @@ public class AuthService {
                 .nama(request.getNama())
                 .alamat(request.getAlamat())
                 .user(user)
-                .build()
+                .build();
 
-        User.setProfile(profile);
+        user.setProfile(profile);
 
         userRepository.save(user);
     }
