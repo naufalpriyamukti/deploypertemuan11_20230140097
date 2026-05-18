@@ -1,10 +1,10 @@
 package com.example.pertemuan11.controller;
 
-import org.springframework.ui.Model;
 import com.example.pertemuan11.model.dto.RegisterRequest;
 import com.example.pertemuan11.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,14 +15,16 @@ public class AuthController {
     private final AuthService authService;
 
     @GetMapping("/register")
-    public String register(Model model) {
+    public String registerPage(Model model){
         model.addAttribute("request", new RegisterRequest());
+
         return "register";
     }
 
     @PostMapping("/register")
-    public String register(@ModelAttribute RegisterRequest request) {
+    public String register(@ModelAttribute RegisterRequest request){
         authService.register(request);
+
         return "redirect:/login";
     }
 
