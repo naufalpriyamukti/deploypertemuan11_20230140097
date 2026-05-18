@@ -1,4 +1,28 @@
 package com.example.pertemuan11.controller;
 
+import ch.qos.logback.core.model.Model;
+import com.example.pertemuan11.model.dto.RegisterRequest;
+import com.example.pertemuan11.service.AuthService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+@RequiredArgsConstructor
 public class AuthController {
+    private final AuthService authService;
+
+    @GetMapping("/register")
+    public String register(Model model) {
+        model.addAttribute("request", new RegisterRequest());
+        return "register";
+    }
+
+    @PostMapping("/register")
+    public String register(@ModelAttribute RegisterRequest request) {
+        authService.register(request);
+        return "redirect:/login";
+    }
 }
